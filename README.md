@@ -1,54 +1,46 @@
-# React + TypeScript + Vite
+# Skip Hire Page Redesign
+This project is a complete redesign and rebuild of a skip hire selection page. The goal was to improve the UI/UX, ensure responsiveness across all devices, and write clean, maintainable, and scalable code using a modern tech stack.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- Modern, Responsive UI: A sleek interface that works seamlessly on desktop, tablet, and mobile devices.
+- Dynamic Data Fetching: Skip options are fetched live from the [wewantwaste](https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft) API.
+- Interactive Selection: Users can easily select and deselect skips, with clear visual feedback.
+- Selection Summary Drawer: A pop-up drawer provides a summary of the selected skip and a clear call to action.
+- Component-Based Architecture: The application is broken down into logical, reusable components for better maintainability.
+- Type-Safe Code: Built with TypeScript to reduce runtime errors and improve developer experience.
+- Centralized State & Logic: A custom useSkips hook encapsulates all data fetching and state management logic.
 
-Currently, two official plugins are available:
+## Tech Stack
+- Framework: React
+- Build Tool: Vite
+- Language: TypeScript
+- Styling: Tailwind CSS
+- HTTP Client: Axios
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-## Expanding the ESLint configuration
+### Prerequisites
+You need to have Node.js (version 16.x or newer) and npm or yarn installed on your machine.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname
-    }
-  }
-});
+- Installation & Setup
+Clone the repository:
+```
+git clone https://github.com/Ozair007/remwaste
+cd remwaste
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules
-  }
-});
+- Install dependencies:
+Using npm:
 ```
+npm install
+
+# Or using yarn:
+
+yarn install
+```
+- Run the development server:
+```
+npm run dev
+```
+This will start the Vite development server. Open your browser and navigate to http://localhost:5173 (or the port specified in your terminal) to see the application running.   
